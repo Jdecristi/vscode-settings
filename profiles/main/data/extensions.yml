@@ -1,0 +1,64 @@
+disabled: []
+enabled:
+  - id: amiralizadeh9480.laravel-extra-intellisense
+    uuid: b52072d1-e507-4261-8935-f4d91a055d7d
+  - id: bmewburn.vscode-intelephense-client
+    uuid: ffda6552-0ad5-431b-a4fa-0905a7e4f3f0
+  - id: bradlc.vscode-tailwindcss
+    uuid: 4db62a7c-7d70-419c-96d2-6c3a4dc77ea5
+  - id: codingyu.laravel-goto-view
+    uuid: 0b86e0a5-d2ef-48d8-9a1a-73f96e65f26e
+  - id: CoenraadS.bracket-pair-colorizer-2
+    uuid: 5a6e2b21-1d61-4acd-b31b-907f9c23f18a
+  - id: csstools.postcss
+    uuid: 80def04d-6d01-495b-9d59-4ad19408872f
+  - id: cweijan.vscode-database-client2
+    uuid: 6ba92c55-a4a0-43f8-8aeb-cc3a03558814
+  - id: dbaeumer.vscode-eslint
+    uuid: 583b2b34-2c1e-4634-8c0b-0b82e283ea3a
+  - id: dsznajder.es7-react-js-snippets
+    uuid: 19804510-b475-4dae-b0f7-6ca08fd1af0c
+  - id: eamodio.gitlens
+    uuid: 4de763bd-505d-4978-9575-2b7696ecf94e
+  - id: EditorConfig.EditorConfig
+    uuid: f60a60a6-95ba-42d4-b41c-3d24c1b89588
+  - id: esbenp.prettier-vscode
+    uuid: 96fa4707-6983-4489-b7c5-d5ffdfdcce90
+  - id: GraphQL.vscode-graphql
+    uuid: 55ef6448-487b-49a0-a66e-4d2d9bb82229
+  - id: GraphQL.vscode-graphql-syntax
+    uuid: e1ab76b1-9acd-4ffa-baf7-1d9eaf7cf3d2
+  - id: HookyQR.beautify
+    uuid: 697255a9-3f36-44c8-b084-d3b91edfb23a
+  - id: MehediDracula.php-namespace-resolver
+    uuid: 651dce1f-eda8-4a5b-aa26-0d1266de8ed1
+  - id: mikestead.dotenv
+    uuid: 532533c9-a894-4a58-9eee-bbfbe7c06f71
+  - id: nonoroazoro.syncing
+    uuid: e7db78ad-ac9f-4919-99bb-3627e07b6d1f
+  - id: onecentlin.laravel-blade
+    uuid: 3b58a227-618a-4b57-a06b-6984a2a8d1ba
+  - id: onecentlin.laravel-extension-pack
+    uuid: null
+  - id: onecentlin.laravel5-snippets
+    uuid: 050d4900-7979-4d10-b7aa-e274f6ae8730
+  - id: Prisma.prisma-insider
+    uuid: 225804c9-dd24-47a8-930d-d8776872df56
+  - id: rust-lang.rust-analyzer
+    uuid: 06574cb4-e5dc-4631-8174-a543a4533621
+  - id: ryannaddy.laravel-artisan
+    uuid: null
+  - id: shufo.vscode-blade-formatter
+    uuid: 68a2e971-8ae5-493b-9c34-f4233fb14e40
+  - id: styled-components.vscode-styled-components
+    uuid: 22a740c5-ec07-4bf0-a58f-1a38aabea310
+  - id: svelte.svelte-vscode
+    uuid: c5463f77-75d9-4a25-8cc4-d8541a461285
+  - id: vscode-icons-team.vscode-icons
+    uuid: 9ccc1dd7-7ec4-4a46-bd4f-7d7b8b9d322a
+  - id: yoavbls.pretty-ts-errors
+    uuid: 1e149c89-8f97-447e-863d-1146f0ad1b70
+  - id: zaaack.markdown-editor
+    uuid: d1d5603c-2be4-4f1b-b7b6-d7e908a8ad73
+  - id: zokugun.cron-tasks
+    uuid: eb05256f-c7aa-4554-95c6-1bb8e30e0cea

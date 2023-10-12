@@ -1,0 +1,86 @@
+{
+  //editor...
+  "editor.fontFamily": "Fira Code",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.guides.indentation": false,
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "files.associations": { "*.css": "postcss" },
+
+  //workbench
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.statusBar.visible": false,
+  "workbench.editor.enablePreview": false,
+  "workbench.welcomePage.walkthroughs.openOnInstall": false,
+  "workbench.startupEditor": "none",
+
+  //terminal...
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.explorerKind": "external",
+  "terminal.external.osxExec": "Warp.app",
+  "terminal.integrated.tabs.enabled": false,
+  "terminal.integrated.tabs.location": "left",
+
+  //Eslint
+  "eslint.validate": [
+    "html",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+
+  // gitlense
+  "gitlens.showWelcomeOnInstall": false,
+  "gitlens.advanced.messages": {
+    "suppressRebaseSwitchToTextWarning": true
+  },
+
+  //json
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  //typescript
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  //svelte
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+
+  //solidity
+  "[solidity]": {
+    "editor.defaultFormatter": "NomicFoundation.hardhat-solidity"
+  },
+
+  //Miscelaneous
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "explorer.openEditors.visible": 0,
+  "material-icon-theme.saturation": 1,
+  "security.workspace.trust.untrustedFiles": "open",
+  "solidity.telemetry": false,
+  "svelte.enable-ts-plugin": true,
+  "workbench.iconTheme": "vscode-icons",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "vsicons.dontShowNewVersionMessage": true,
+  "database-client.telemetry.usesOnlineServices": false,
+  "workbench.editor.empty.hint": "hidden",
+  "window.zoomLevel": 1,
+  "sync.gist": "b6ff0f2cb7ba20dacca89fd6f557f846",
+  "sync.forceDownload": false,
+  "sync.forceUpload": false,
+  "sync.syncExtensions": false,
+  "sync.removeExtensions": false,
+  "sync.quietSync": false,
+  "sync.autoUpload": false,
+  "sync.autoDownload": false
+}
