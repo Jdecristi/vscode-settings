@@ -1,0 +1,81 @@
+#Custom Promt
+setopt prompt_subst
+autoload -U colors && colors
+git_info() {
+  ! git rev-parse --is-inside-work-tree > /dev/null 2>&1 && return
+  local GIT_LOCATION=${$(git symbolic-ref -q HEAD || git name-rev --name-only --no-undefined --always HEAD)#(refs/heads/|tags/)}
+  local AHEAD="⇡NUM "
+  local BEHIND="⇣NUM "
+  local MERGING="%F{#ff7e00}!%f "
+  local UNTRACKED="%F{#ff0000}●%f "
+  local MODIFIED="%F{#fdd73c}●%f "
+  local STAGED="%F{#01e800}●%f "
+
+  local -a GIT_LOCATION_COLOR
+  local -a DIVERGENCES
+  local -a FLAGS
+
+  local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null | wc -l | tr -d ' ')"
+
+  if [ "$NUM_AHEAD" -gt 0 ]; then
+    DIVERGENCES+=( "${AHEAD//NUM/$NUM_AHEAD}" )
+  fi
+
+  local NUM_BEHIND="$(git log --oneline ..@{u} 2> /dev/null | wc -l | tr -d ' ')"
+  if [ "$NUM_BEHIND" -gt 0 ]; then
+    DIVERGENCES+=( "${BEHIND//NUM/$NUM_BEHIND}" )
+  fi
+
+  local GIT_DIR="$(git rev-parse --git-dir 2> /dev/null)"
+  if [ -n $GIT_DIR ] && test -r $GIT_DIR/MERGE_HEAD; 
+    then
+      FLAGS+=( "$MERGING" )
+  fi
+
+  if [[ -n $(git ls-files --other --exclude-standard 2> /dev/null) ]]; 
+    then
+      FLAGS+=( "$UNTRACKED" )
+      GIT_LOCATION_COLOR+=("#fdd73c")
+  fi
+
+  if ! git diff --quiet 2> /dev/null; 
+    then
+      FLAGS+=( "$MODIFIED" )
+      GIT_LOCATION_COLOR+=("#fdd73c")
+  fi
+
+  if ! git diff --cached --quiet 2> /dev/null; 
+    then
+      FLAGS+=( "$STAGED" )
+      GIT_LOCATION_COLOR+=("#fdd73c")
+
+    else
+      GIT_LOCATION_COLOR+=("#01e800")
+
+  fi
+
+  local -a GIT_INFO
+  GIT_INFO+=(" | %F{${GIT_LOCATION_COLOR}}$GIT_LOCATION%f" )
+  [ -n "$GIT_STATUS" ] && GIT_INFO+=( "$GIT_STATUS" )
+  [[ ${#DIVERGENCES[@]} -ne 0 ]] && GIT_INFO+=( "${(j::)DIVERGENCES}" )
+  [[ ${#FLAGS[@]} -ne 0 ]] && GIT_INFO+=( "${(j::)FLAGS}" )
+  echo "${(j: :)GIT_INFO}"
+
+}
+PS1=' %F{45}${PWD/#$HOME/~}%f$(git_info)'
+
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/joshdecristiwork/.oh-my-zsh
+export EDITOR='codium'
+
+plugins=(git)
+plugins=(nvm)
+
+
+#alias'
+alias c="clear"
+alias edit="codium"
+
+#git alias'
+alias git-reset="git clean -df && git reset --hard"
+alias git-main="git-reset && git checkout main && git pull"
